@@ -12,7 +12,7 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'aws-root', usernameVariable: "AWS_ACCESS_KEY_ID", passwordVariable: "AWS_SECRET_ACCESS_KEY")]) {
                         sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${REGISTRY_URL}"
-                        sh "docker build -t ${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
+                        sh "docker build -t ${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG} ."
                         
                     }
                 }
