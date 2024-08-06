@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any 
     environment {
         IMAGE_NAME = 'frontend'
         IMAGE_TAG = 'v0.1.0'
