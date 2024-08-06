@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        IMAGE_NAME = 'frontend'
+        IMAGE_NAME = 'loadgenerator'
         IMAGE_TAG = 'v0.1.0'
         AWS_REGION = 'ap-southeast-1'
         REGISTRY_URL = "010438465474.dkr.ecr.${AWS_REGION}.amazonaws.com/microservice-demo"
